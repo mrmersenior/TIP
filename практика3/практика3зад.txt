@@ -1,0 +1,162 @@
+1
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main() {
+    double a, b;
+    cin >> a >> b;
+    cout << sqrt(a * a + b * b) << endl;
+    return 0;
+}
+
+2
+#include <iostream>
+using namespace std;
+int main() {
+    int v, t;
+    cin >> v >> t;
+    int pos = (v * t) % 109;
+    cout << (pos + 109) % 109 << endl;
+    return 0;
+}
+
+3
+#include <iostream>
+using namespace std;
+int main() {
+    int n;
+    cin >> n;
+    cout << (n / 10) % 10 << endl;
+    return 0;
+}
+
+4
+#include <iostream>
+using namespace std;
+int main() {
+    int n;
+    cin >> n;
+    cout << n + 2 - (n % 2) << endl;
+    return 0;
+}
+
+5
+#include <iostream>
+using namespace std;
+int main() {
+    int n;
+    cin >> n;
+    int h = (n / 3600) % 24;
+    int m = (n / 60) % 60;
+    int s = n % 60;
+    cout << h << ":";
+    if (m < 10) cout << "0";
+    cout << m << ":";
+    if (s < 10) cout << "0";
+    cout << s << endl;
+    return 0;
+}
+
+6
+#include <iostream>
+using namespace std;
+int main() {
+    int a, b;
+    cin >> a >> b;
+    a = a + b;
+    b = a - b;
+    a = a - b;
+    cout << a << " " << b << endl;
+    return 0;
+}
+
+7
+#include <iostream>
+using namespace std;
+int main() {
+    int h, a, b;
+    cin >> h >> a >> b;
+    cout << (h - b - 1) / (a - b) + 1 << endl;
+    return 0;
+}
+
+8
+#include <iostream>
+using namespace std;
+int main() {
+    int n;
+    cin >> n;
+    int d1 = n / 1000;
+    int d2 = (n / 100) % 10;
+    int d3 = (n / 10) % 10;
+    int d4 = n % 10;
+    int check = (d1 == d4) && (d2 == d3);
+    cout << check << endl;
+    return 0;
+}
+
+9
+#include <iostream>
+using namespace std;
+int main() {
+    int n, m;
+    cin >> n >> m;
+    int rem1 = n % m;
+    int rem2 = m % n;
+    int check = (rem1 == 0) || (rem2 == 0);
+    cout << check << endl;
+    return 0;
+}
+
+10
+#include <iostream>
+using namespace std;
+int main() {
+    int a, b;
+    cin >> a >> b;
+    int max_val = (a + b + abs(a - b)) / 2;
+    cout << max_val << endl;
+    return 0;
+}
+
+
+11
+using namespace std;
+int main() {
+    int val = 50;
+    int* ptr = &val;
+    cout << "Адрес: " << ptr << endl;
+    cout << "Значение: " << *ptr << endl;
+    *ptr = 100;
+    cout << "Новое значение: " << val << endl;
+    return 0;
+}
+
+12
+#include <iostream>
+using namespace std;
+int main() {
+    int arr[3] = {10, 20, 30};
+    int* ptr = arr;
+    for (int i = 0; i < 3; i++) {
+        cout << *(ptr + i) << " ";
+    }
+    cout << endl;
+    return 0;
+}
+
+13
+#include <iostream>
+using namespace std;
+struct Student {
+    string name;
+    int age;
+};
+int main() {
+    Student* s = new Student;
+    s->name = "Alex";
+    s->age = 19;
+    cout << s->name << " " << s->age << endl;
+    delete s;
+    return 0;
+}
